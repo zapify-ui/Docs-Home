@@ -1,0 +1,36 @@
+{
+  "name": "zapify-docs",
+  "version": "1.0.0",
+  "description": "Site for Zapify V1",
+  "main": "babel.config.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "release-heroku": "babel-node --presets @babel/preset-env ./tools/release-heroku.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix",
+    "test": "eslint src",
+    "prettier": "pretty-quick --staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zapify-ui/Docs-Home.git"
+  },
+  "keywords": [
+    "zapify",
+    "zapify-ui",
+    "zapify",
+    "docs"
+  ],
+  "author": "piyush mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zapify-ui/Docs-Home/issues"
+  },
+  "homepage": "https://github.com/zapify-ui/Docs-Home#readme",
+  "pre-commit": [
+    "lint-fix",
+    "prettier"
+  ],
+  "sideEffects": false
+}
